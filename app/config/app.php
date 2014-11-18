@@ -46,7 +46,7 @@ return [
 
     'api' => [
 
-        'url' => 'http://pagekit.com/api'
+        'url' => 'https://pagekit.com/api'
 
     ],
 
