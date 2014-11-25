@@ -13,6 +13,7 @@
 /composer.lock
 /pagekit*.zip
 /.idea
+*.sass-cache
 node_modules
 .DS_Store
 *.mo
