@@ -44,6 +44,9 @@ class Item extends BaseItem
     /** @Column(type="json_array") */
     protected $data;
 
+    /** @Column(type="string") */
+    protected $cssclass;
+
     /**
      * @var Menu
      * @BelongsTo(targetEntity="Menu", keyFrom="menu_id")

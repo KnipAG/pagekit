@@ -1,6 +1,6 @@
 <ul class="uk-subnav @($options.classes ? ' ' . options.classes : '')">
 @foreach ($root.children as $item)
-    <li class="@($item.attribute('active') ? ' uk-active' : '')">
+    <li class="@($item.getCssClass) @($item.attribute('active') ? ' uk-active' : '')">
         <a href="@url($item.url)">@($item.name)</a>
     </li>
 @endforeach

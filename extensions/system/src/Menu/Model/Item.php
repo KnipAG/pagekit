@@ -48,6 +48,8 @@ class Item implements ItemInterface
      */
     protected $data = [];
 
+    protected $cssclass;
+
     /**
      * {@inheritdoc}
      */
@@ -185,6 +187,22 @@ class Item implements ItemInterface
     public function hashCode()
     {
         return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCssClass()
+    {
+        return $this->cssclass;
+    }
+
+    /**
+     * @param mixed $cssclass
+     */
+    public function setCssClass($cssclass)
+    {
+        $this->cssclass = $cssclass;
     }
 
     /**

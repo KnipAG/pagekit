@@ -45,6 +45,10 @@ class SystemExtension extends Extension
      */
     public function boot(Application $app)
     {
+        if ($version = $this['migrator']->create('extension://system/migrations', $this['option']->get('system:version'))->run()) {
+            $this['option']->set('system:version', $version);
+        }
+
         if (!(isset($this['config']) ? $this['config']['app.debug'] : true)) {
             $app['events']->addSubscriber(new ExceptionListener('Pagekit\System\Exception\ExceptionController::showAction'));
         }
