@@ -36,6 +36,9 @@ class Page
     /** @Column(type="json_array") */
     protected $data;
 
+    /** @Column(type="string") */
+    protected $bodyCssClass;
+
     public function getId()
     {
         return $this->id;
@@ -100,4 +103,21 @@ class Page
             self::STATUS_PUBLISHED   => __('Published')
         ];
     }
+
+    /**
+     * @return mixed
+     */
+    public function getBodyCssClass()
+    {
+        return $this->bodyCssClass;
+    }
+
+    /**
+     * @param mixed $bodyCssClass
+     */
+    public function setBodyCssClass($bodyCssClass)
+    {
+        $this->bodyCssClass = $bodyCssClass;
+    }
+
 }
