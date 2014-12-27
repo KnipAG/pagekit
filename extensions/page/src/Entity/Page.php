@@ -39,6 +39,9 @@ class Page
     /** @Column(type="string") */
     protected $bodyCssClass;
 
+    /** @Column(type="string") */
+    protected $metaDescription;
+
     public function getId()
     {
         return $this->id;
@@ -118,6 +121,22 @@ class Page
     public function setBodyCssClass($bodyCssClass)
     {
         $this->bodyCssClass = $bodyCssClass;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMetaDescription()
+    {
+        return $this->metaDescription;
+    }
+
+    /**
+     * @param mixed $metaDescription
+     */
+    public function setMetaDescription($metaDescription)
+    {
+        $this->metaDescription = $metaDescription;
     }
 
 }
