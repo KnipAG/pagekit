@@ -47,6 +47,6 @@ class SiteController extends Controller
 
         $page->setContent($this['content']->applyPlugins($page->getContent(), ['page' => $page, 'markdown' => $page->get('markdown')]));
 
-        return ['head.title' => __($page->getTitle()), 'page' => $page, 'page.bodyCssClass' => $page->getBodyCssClass()];
+        return ['head.title' => __($page->getTitle()), 'head.description' => $page->getMetaDescription(), 'page' => $page, 'page.bodyCssClass' => $page->getBodyCssClass()];
     }
 }
